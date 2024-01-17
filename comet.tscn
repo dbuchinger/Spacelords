@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://62j4p4vcb1rg"]
+
+[ext_resource type="Script" path="res://Comet.gd" id="1_5tn70"]
+[ext_resource type="Texture2D" uid="uid://bqdhmf6sybts3" path="res://icon.svg" id="2_knapu"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_bgnxb"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c0wfb"]
+radius = 12.0
+
+[node name="Comet" type="RigidBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_bgnxb")
+gravity_scale = 0.0
+max_contacts_reported = 1000
+contact_monitor = true
+linear_damp_mode = 1
+script = ExtResource("1_5tn70")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_knapu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_c0wfb")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

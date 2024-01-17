@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3rvutksdpsqh"]
+
+[sub_resource type="GDScript" id="GDScript_fro6c"]
+script/source = "extends StaticBody2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_peha1"]
+size = Vector2(350, 50)
+
+[node name="Outer Wall" type="StaticBody2D"]
+script = SubResource("GDScript_fro6c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_peha1")
