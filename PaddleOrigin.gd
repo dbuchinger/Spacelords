@@ -1,14 +1,14 @@
-extends Path2D
+extends Node2D
 
-@onready var follow = get_node("PathFollow2D")
+var speed = 2  # rotation speed (in radians)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-	
+	pass
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if Input.is_action_pressed("ui_down") || Input.is_action_pressed("ui_right"):
-		follow.progress += 300 * delta
+		rotation = clamp(rotation + speed * delta, -.6, .6)
 	if Input.is_action_pressed("ui_up") || Input.is_action_pressed("ui_left"):
-		follow.progress -= 300 * delta
+		rotation = clamp(rotation - speed * delta, -.6, .6)

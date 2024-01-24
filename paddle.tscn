@@ -1,44 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://qp8vhvflc305"]
+[gd_scene load_steps=3 format=3 uid="uid://qp8vhvflc305"]
 
-[ext_resource type="Texture2D" uid="uid://b5g1ghl6yxqj3" path="res://Paddle.png" id="1_riyhv"]
+[ext_resource type="Texture2D" uid="uid://cj0vgcx1lryh7" path="res://Paddle.png" id="1_efd72"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y80rh"]
-size = Vector2(14.9696, 5.01532)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_v4ybo"]
-size = Vector2(10.2709, 5.29031)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_p6j7e"]
-size = Vector2(13.5744, 5.35461)
+size = Vector2(29, 6)
 
 [node name="Paddle" type="CharacterBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("1_riyhv")
+texture = ExtResource("1_efd72")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -3.5)
 shape = SubResource("RectangleShape2D_y80rh")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
-position = Vector2(12.2313, -2.63753)
-rotation = 0.1309
-shape = SubResource("RectangleShape2D_v4ybo")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
-position = Vector2(-12.231, -2.638)
-rotation = -0.1309
-shape = SubResource("RectangleShape2D_v4ybo")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(23.2, 0.682)
-rotation = 0.436332
-skew = -0.378736
-shape = SubResource("RectangleShape2D_p6j7e")
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
-position = Vector2(-23.6946, 0.804472)
-rotation = -0.436332
-skew = 0.378736
-shape = SubResource("RectangleShape2D_p6j7e")

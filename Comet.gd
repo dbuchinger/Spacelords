@@ -9,5 +9,5 @@ func _ready():
 func _physics_process(delta):
 	var collision_info = move_and_collide(velocity * delta)
 	if collision_info:
-		velocity *= 1.03
+		velocity *= 1.02
 		velocity = velocity.bounce(collision_info.get_normal())
