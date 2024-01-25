@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bqdhmf6sybts3" path="res://Images/icon.svg" id="2_gimyh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_iwlo5"]
-radius = 13.0384
+radius = 6.0
 
 [node name="Comet" type="CharacterBody2D"]
 collision_layer = 4
@@ -12,7 +12,7 @@ collision_mask = 15
 script = ExtResource("1_5tn70")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.2, 0.2)
+scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_gimyh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

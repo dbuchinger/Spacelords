@@ -10,13 +10,12 @@ func _ready():
 
 func _physics_process(delta):
 	var collision_info = move_and_collide(velocity * delta)
-	print(speed)
 	if collision_info:
-		if collision_info.get_collider_id() == paddle_id:
+		if collision_info.get_collider().is_in_group("Paddles"):
 			velocity = global_position - collision_info.get_collider().global_position
-			velocity = velocity.normalized() * speed
 			speed = clamp(speed + 5, 100, 300)
+			velocity = velocity.normalized() * speed
 		else: 
+			speed = clamp(speed + 5, 100, 300)
 			velocity = velocity.normalized() * speed
 			velocity = velocity.bounce(collision_info.get_normal())
-			speed = clamp(speed + 5, 100, 300)
