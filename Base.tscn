@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdyfwe4yam343"]
+
+[ext_resource type="Texture2D" uid="uid://bgji1w1vsedi" path="res://Images/Base.png" id="1_3022p"]
+[ext_resource type="Script" path="res://Base.gd" id="1_x2a0g"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1kmj0"]
+radius = 22.0
+
+[node name="Base" type="Area2D"]
+collision_layer = 8
+collision_mask = 4
+script = ExtResource("1_x2a0g")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_3022p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_1kmj0")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

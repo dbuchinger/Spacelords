@@ -13,7 +13,7 @@ config_version=5
 config/name="Spacelords"
 run/main_scene="res://GameSpace.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Images/icon.svg"
 
 [display]
 
@@ -26,3 +26,10 @@ window/stretch/mode="viewport"
 
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
+
+[layer_names]
+
+2d_physics/layer_1="Walls"
+2d_physics/layer_2="Paddles"
+2d_physics/layer_3="Comets"
+2d_physics/layer_4="Bases"
