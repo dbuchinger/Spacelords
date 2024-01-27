@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cvbtlgvhsb3cy"]
+[gd_scene load_steps=7 format=3 uid="uid://cvbtlgvhsb3cy"]
 
 [ext_resource type="Script" path="res://GameSpace.gd" id="1_0rjoc"]
 [ext_resource type="PackedScene" uid="uid://d3rvutksdpsqh" path="res://OuterWall.tscn" id="1_of8fq"]
 [ext_resource type="PackedScene" uid="uid://62j4p4vcb1rg" path="res://Comet.tscn" id="2_nle7a"]
 [ext_resource type="PackedScene" uid="uid://bsjylon4x0hbl" path="res://PaddleOrigin.tscn" id="3_rx815"]
 [ext_resource type="PackedScene" uid="uid://bdyfwe4yam343" path="res://Base.tscn" id="4_wq4h8"]
+[ext_resource type="PackedScene" uid="uid://dxbs0x613vank" path="res://Shield1.tscn" id="6_gs8u7"]
 
 [node name="Game Space" type="Node2D"]
 script = ExtResource("1_0rjoc")
@@ -31,3 +32,7 @@ position = Vector2(0, 180)
 
 [node name="Base" parent="." instance=ExtResource("4_wq4h8")]
 position = Vector2(0, 180)
+
+[node name="Shield1" parent="." instance=ExtResource("6_gs8u7")]
+position = Vector2(23, 158)
+rotation = 1.5708

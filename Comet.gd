@@ -15,6 +15,11 @@ func _physics_process(delta):
 			velocity = global_position - collision_info.get_collider().global_position
 			speed = clamp(speed + 5, 100, 300)
 			velocity = velocity.normalized() * speed
+		elif collision_info.get_collider().is_in_group("Shields"):
+			speed = clamp(speed + 5, 100, 300)
+			velocity = velocity.normalized() * speed
+			velocity = velocity.bounce(collision_info.get_normal())
+			collision_info.get_collider().queue_free()
 		else: 
 			speed = clamp(speed + 5, 100, 300)
 			velocity = velocity.normalized() * speed
