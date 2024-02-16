@@ -11,17 +11,17 @@
 script = ExtResource("1_0rjoc")
 
 [node name="Top Wall" parent="." instance=ExtResource("1_of8fq")]
-position = Vector2(160, -25)
+position = Vector2(640, -100)
 
 [node name="Bottom Wall" parent="." instance=ExtResource("1_of8fq")]
-position = Vector2(160, 205)
+position = Vector2(640, 820)
 
 [node name="Left Wall" parent="." instance=ExtResource("1_of8fq")]
-position = Vector2(-25, 90)
+position = Vector2(-100, 360)
 rotation = 1.5708
 
 [node name="Right Wall" parent="." instance=ExtResource("1_of8fq")]
-position = Vector2(345, 90)
+position = Vector2(1380, 360)
 rotation = 1.5708
 
 [node name="Comet" parent="." instance=ExtResource("2_nle7a")]

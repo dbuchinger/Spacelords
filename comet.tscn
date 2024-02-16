@@ -1,10 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://62j4p4vcb1rg"]
+[gd_scene load_steps=5 format=3 uid="uid://62j4p4vcb1rg"]
 
 [ext_resource type="Script" path="res://Comet.gd" id="1_5tn70"]
-[ext_resource type="Texture2D" uid="uid://bqdhmf6sybts3" path="res://Images/icon.svg" id="2_gimyh"]
+[ext_resource type="Texture2D" uid="uid://bolfd87nksjuw" path="res://Images/Comet.png" id="2_0cmj6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_iwlo5"]
-radius = 6.0
+radius = 32.0156
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ow6j7"]
+particle_flag_disable_z = true
+initial_velocity_max = 157.9
+gravity = Vector3(0, 0, 0)
 
 [node name="Comet" type="CharacterBody2D"]
 collision_layer = 4
@@ -12,8 +17,10 @@ collision_mask = 15
 script = ExtResource("1_5tn70")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("2_gimyh")
+texture = ExtResource("2_0cmj6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_iwlo5")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+process_material = SubResource("ParticleProcessMaterial_ow6j7")

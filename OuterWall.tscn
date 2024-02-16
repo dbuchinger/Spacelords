@@ -1,7 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://d3rvutksdpsqh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_peha1"]
-size = Vector2(350, 50)
+size = Vector2(1300, 200)
 
 [node name="Outer Wall" type="StaticBody2D"]
 
