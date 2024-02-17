@@ -11,28 +11,28 @@
 script = ExtResource("1_0rjoc")
 
 [node name="Top Wall" parent="." instance=ExtResource("1_of8fq")]
-position = Vector2(640, -100)
+position = Vector2(800, -150)
 
 [node name="Bottom Wall" parent="." instance=ExtResource("1_of8fq")]
-position = Vector2(640, 820)
+position = Vector2(800, 1050)
 
 [node name="Left Wall" parent="." instance=ExtResource("1_of8fq")]
-position = Vector2(-100, 360)
+position = Vector2(-150, 450)
 rotation = 1.5708
 
 [node name="Right Wall" parent="." instance=ExtResource("1_of8fq")]
-position = Vector2(1380, 360)
+position = Vector2(1750, 450)
 rotation = 1.5708
 
 [node name="Comet" parent="." instance=ExtResource("2_nle7a")]
-position = Vector2(160, 90)
+position = Vector2(510, 486)
 
 [node name="PaddleOrigin" parent="." instance=ExtResource("3_rx815")]
-position = Vector2(0, 180)
+position = Vector2(0, 900)
 
 [node name="Base" parent="." instance=ExtResource("4_wq4h8")]
-position = Vector2(0, 180)
+position = Vector2(0, 900)
 
 [node name="Shield1" parent="." instance=ExtResource("6_gs8u7")]
-position = Vector2(23, 158)
+position = Vector2(90, 809)
 rotation = 1.5708

@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Base.gd" id="1_x2a0g"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1kmj0"]
-radius = 22.0
+radius = 90.0
 
 [node name="Base" type="Area2D"]
 collision_layer = 8
@@ -12,7 +12,7 @@ collision_mask = 4
 script = ExtResource("1_x2a0g")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.2, 0.2)
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("1_3022p")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
