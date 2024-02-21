@@ -7,5 +7,5 @@
 script = ExtResource("1_d6ney")
 
 [node name="Paddle" parent="." instance=ExtResource("2_ypo7m")]
-position = Vector2(160, -160)
+position = Vector2(200, -200)
 rotation = 0.785398

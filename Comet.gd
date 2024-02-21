@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 var base_speed = 400
 var max_speed = 1200
-var current_speed = base_speed
+var current_speed = 1200
 var acceleration_rate = 10
 
 func _ready():

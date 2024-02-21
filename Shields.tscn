@@ -1,0 +1,63 @@
+[gd_scene load_steps=7 format=3 uid="uid://hcyo28cuutlv"]
+
+[ext_resource type="Texture2D" uid="uid://c3wc44pd38nb2" path="res://Images/OuterShieldLeft.png" id="1_bavlm"]
+[ext_resource type="Texture2D" uid="uid://lmi0ayw1ftvr" path="res://Images/OuterShieldMiddle.png" id="2_v55sa"]
+[ext_resource type="Texture2D" uid="uid://dmjt11dwkb5x3" path="res://Images/OuterShieldRight.png" id="3_epgui"]
+[ext_resource type="Texture2D" uid="uid://k43o54ijgfid" path="res://Images/CenterShieldLeft.png" id="4_k08td"]
+[ext_resource type="Texture2D" uid="uid://jcrtbmqu6sql" path="res://Images/CenterShieldRight.png" id="5_d5e8n"]
+[ext_resource type="Texture2D" uid="uid://frcbe7qf5t0y" path="res://Images/InnerShield.png" id="6_dfdpu"]
+
+[node name="Shields" type="Node2D"]
+
+[node name="OuterLeftShield" type="StaticBody2D" parent="." groups=["Shields"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="OuterLeftShield"]
+texture = ExtResource("1_bavlm")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="OuterLeftShield"]
+polygon = PackedVector2Array(-64, -64, -52, -64, -41, -62, -28, -59, -15, -55, -1, -48, 1, -47, -5, -34, -11, -37, -19, -41, -27, -44, -35, -46, -43, -48, -54, -50, -64, -50)
+
+[node name="OuterMiddleShield" type="StaticBody2D" parent="." groups=["Shields"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="OuterMiddleShield"]
+texture = ExtResource("2_v55sa")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="OuterMiddleShield"]
+position = Vector2(60, 24)
+polygon = PackedVector2Array(-59, -71, -51, -66, -45, -61, -37, -54, -29, -46, -22, -38, -17, -31, -12, -23, -24, -16, -29, -23, -34, -30, -40, -38, -46, -44, -54, -50, -65, -58)
+
+[node name="OuterRightShield" type="StaticBody2D" parent="." groups=["Shields"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="OuterRightShield"]
+texture = ExtResource("3_epgui")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="OuterRightShield"]
+position = Vector2(89, 81)
+polygon = PackedVector2Array(-41, -80, -37, -72, -34, -65, -29, -50, -27, -43, -26, -35, -25, -27, -25, -17, -39, -17, -40, -31, -41, -39, -45, -54, -49, -65, -53, -73)
+
+[node name="CenterLeftShield" type="StaticBody2D" parent="." groups=["Shields"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterLeftShield"]
+texture = ExtResource("4_k08td")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CenterLeftShield"]
+position = Vector2(-1, 22)
+polygon = PackedVector2Array(-63, -58, -63, -72, -45, -71, -27, -67, -15, -62, -4, -55, 6, -49, 18, -38, 10, -27, 4, -32, -8, -42, -23, -50, -38, -55, -52, -57)
+
+[node name="CenterRightShield" type="StaticBody2D" parent="." groups=["Shields"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterRightShield"]
+texture = ExtResource("5_d5e8n")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CenterRightShield"]
+position = Vector2(75, 81)
+polygon = PackedVector2Array(-58, -97, -53, -92, -47, -84, -38, -71, -34, -62, -30, -51, -27, -41, -26, -35, -25, -27, -25, -17, -39, -17, -40, -31, -41, -39, -46, -54, -51, -65, -58, -76, -66, -86)
+
+[node name="OuterRightShield2" type="StaticBody2D" parent="." groups=["Shields"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="OuterRightShield2"]
+texture = ExtResource("6_dfdpu")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="OuterRightShield2"]
+position = Vector2(10, 61)
+polygon = PackedVector2Array(-74, -97, -58, -96, -40, -91, -26, -85, -13, -76, 0, -65, 9, -53, 17, -39, 23, -23, 26, -6, 26, 3, 12, 3, 10, -16, 6, -30, -1, -44, -12, -57, -25, -69, -43, -78, -51, -81, -61, -83, -74, -84)

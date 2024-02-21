@@ -9,6 +9,6 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if Input.is_action_pressed("ui_down") || Input.is_action_pressed("ui_right"):
-		rotation = clamp(rotation + speed * delta, -.65, .65)
+		rotation = clamp(rotation + speed * delta, -.7, .7)
 	if Input.is_action_pressed("ui_up") || Input.is_action_pressed("ui_left"):
-		rotation = clamp(rotation - speed * delta, -.65, .65)
+		rotation = clamp(rotation - speed * delta, -.7, .7)

@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://62j4p4vcb1rg" path="res://Comet.tscn" id="2_nle7a"]
 [ext_resource type="PackedScene" uid="uid://bsjylon4x0hbl" path="res://PaddleOrigin.tscn" id="3_rx815"]
 [ext_resource type="PackedScene" uid="uid://bdyfwe4yam343" path="res://Base.tscn" id="4_wq4h8"]
-[ext_resource type="PackedScene" uid="uid://dxbs0x613vank" path="res://Shield1.tscn" id="6_gs8u7"]
+[ext_resource type="PackedScene" uid="uid://hcyo28cuutlv" path="res://Shields.tscn" id="6_ggmlb"]
 
 [node name="Game Space" type="Node2D"]
 script = ExtResource("1_0rjoc")
@@ -33,6 +33,6 @@ position = Vector2(0, 900)
 [node name="Base" parent="." instance=ExtResource("4_wq4h8")]
 position = Vector2(0, 900)
 
-[node name="Shield1" parent="." instance=ExtResource("6_gs8u7")]
-position = Vector2(90, 809)
-rotation = 1.5708
+[node name="Shields" parent="." instance=ExtResource("6_ggmlb")]
+position = Vector2(129, 772)
+scale = Vector2(2, 2)
