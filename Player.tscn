@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://brx1llir0bm1t"]
+
+[ext_resource type="PackedScene" uid="uid://bdyfwe4yam343" path="res://Base.tscn" id="1_uchxv"]
+[ext_resource type="PackedScene" uid="uid://bsjylon4x0hbl" path="res://PaddleOrigin.tscn" id="2_j17wb"]
+[ext_resource type="PackedScene" uid="uid://hcyo28cuutlv" path="res://Shields.tscn" id="3_c221f"]
+
+[node name="Player" type="Node2D"]
+
+[node name="Base" parent="." instance=ExtResource("1_uchxv")]
+
+[node name="PaddleOrigin" parent="." instance=ExtResource("2_j17wb")]
+
+[node name="Shields" parent="." instance=ExtResource("3_c221f")]

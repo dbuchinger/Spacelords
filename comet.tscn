@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://62j4p4vcb1rg"]
 
-[ext_resource type="Script" path="res://Comet.gd" id="1_5tn70"]
+[ext_resource type="Script" path="res://Scripts/Comet.gd" id="1_5tn70"]
 [ext_resource type="Texture2D" uid="uid://bolfd87nksjuw" path="res://Images/Comet.png" id="2_0cmj6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_iwlo5"]

@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://bsjylon4x0hbl"]
 
-[ext_resource type="Script" path="res://PaddleOrigin.gd" id="1_d6ney"]
+[ext_resource type="Script" path="res://Scripts/PaddleOrigin.gd" id="1_77cq4"]
 [ext_resource type="PackedScene" uid="uid://qp8vhvflc305" path="res://Paddle.tscn" id="2_ypo7m"]
 
 [node name="PaddleOrigin" type="Node2D"]
-script = ExtResource("1_d6ney")
+script = ExtResource("1_77cq4")
 
 [node name="Paddle" parent="." instance=ExtResource("2_ypo7m")]
 position = Vector2(200, -200)

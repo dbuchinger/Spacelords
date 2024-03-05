@@ -1,6 +1,6 @@
 extends Node2D
 
-var speed = 3  # rotation speed (in radians)
+var speed = 2.5  # rotation speed (in radians)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
