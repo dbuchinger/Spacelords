@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dh2p4mv8que8f"]
+
+[ext_resource type="Texture2D" uid="uid://doqypw5v8vw71" path="res://Images/powerup.png" id="1_ry7ox"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3io38"]
+size = Vector2(16, 16)
+
+[node name="Powerup" type="Area2D"]
+scale = Vector2(3, 3)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ry7ox")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_3io38")
