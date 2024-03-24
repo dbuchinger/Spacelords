@@ -13,3 +13,6 @@ func _process(delta):
 
 func _physics_process(delta):
 	position += velocity * speed * delta
+
+func _on_body_entered(body):
+	queue_free()
