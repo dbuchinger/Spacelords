@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://b6u3pfwpdxfb3"]
 
 [ext_resource type="Script" path="res://Missile.gd" id="1_8ria4"]
-[ext_resource type="Texture2D" uid="uid://caqqqay7oimp3" path="res://Images/missile.png" id="2_bo0mu"]
+[ext_resource type="Texture2D" uid="uid://cmm65o0l30yap" path="res://Images/missile_unarmed.png" id="2_4seeu"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i3vuk"]
-radius = 3.0
+radius = 5.0
 height = 14.0
 
 [node name="Missile" type="Area2D" groups=["Destroyer"]]
@@ -13,7 +13,7 @@ collision_mask = 63
 script = ExtResource("1_8ria4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_bo0mu")
+texture = ExtResource("2_4seeu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_i3vuk")

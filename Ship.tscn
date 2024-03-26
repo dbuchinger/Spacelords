@@ -19,4 +19,4 @@ texture = ExtResource("1_njd4e")
 shape = SubResource("CircleShape2D_ruyb2")
 
 [node name="ProjectileSpawn" type="Node2D" parent="."]
-position = Vector2(9, 0)
+position = Vector2(11, 0)
