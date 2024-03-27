@@ -27,3 +27,5 @@ position = Vector2(510, 486)
 
 [node name="Player" parent="." instance=ExtResource("4_d8334")]
 position = Vector2(0, 900)
+
+[editable path="Player"]

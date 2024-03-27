@@ -1,7 +1,7 @@
 extends Area2D
 
-var death_time = 5000
-var speed = 50
+var death_time = 10000
+var speed = 100
 var velocity = Vector2.ZERO
 var active_delay = 100
 var arm_time = 1000
@@ -18,7 +18,7 @@ func _process(delta):
 		queue_free()
 	if Time.get_ticks_msec() >= arm_time:
 		sprite.texture = armed_sprite
-		speed = 100
+		speed = 250
 		
 func _physics_process(delta):
 	position += velocity * speed * delta

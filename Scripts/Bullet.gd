@@ -1,7 +1,7 @@
 extends Area2D
 
 var death_time = 0
-var speed = 300
+var speed = 800
 var velocity = Vector2.ZERO
 
 func _ready():
