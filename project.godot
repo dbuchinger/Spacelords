@@ -188,6 +188,7 @@ ship_missile2={
 2d_physics/layer_4="Bases"
 2d_physics/layer_5="Ships"
 2d_physics/layer_6="Projectiles"
+2d_physics/layer_7="Invincible"
 
 [rendering]
 

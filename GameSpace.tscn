@@ -1,12 +1,27 @@
-[gd_scene load_steps=5 format=3 uid="uid://cvbtlgvhsb3cy"]
+[gd_scene load_steps=15 format=3 uid="uid://cvbtlgvhsb3cy"]
 
 [ext_resource type="Script" path="res://Scripts/GameSpace.gd" id="1_0rjoc"]
 [ext_resource type="PackedScene" uid="uid://d3rvutksdpsqh" path="res://OuterWall.tscn" id="1_of8fq"]
 [ext_resource type="PackedScene" uid="uid://62j4p4vcb1rg" path="res://Comet.tscn" id="2_nle7a"]
+[ext_resource type="Texture2D" uid="uid://cvmpw8xac17p3" path="res://Images/background.png" id="2_nocwr"]
 [ext_resource type="PackedScene" uid="uid://brx1llir0bm1t" path="res://Player.tscn" id="4_d8334"]
+[ext_resource type="Texture2D" uid="uid://dwxusgfextrem" path="res://Images/base2.png" id="5_e050k"]
+[ext_resource type="Texture2D" uid="uid://smqcslpx3kur" path="res://Images/base3.png" id="5_hsfmm"]
+[ext_resource type="Texture2D" uid="uid://b67gbk5mbnyey" path="res://Images/paddle3.png" id="6_kkx65"]
+[ext_resource type="Texture2D" uid="uid://cb0hjsqqgiqqj" path="res://Images/paddle2.png" id="6_m086k"]
+[ext_resource type="Texture2D" uid="uid://c1p5aiaqpffwy" path="res://Images/ship3.png" id="7_tohny"]
+[ext_resource type="Texture2D" uid="uid://d0k64o1ljw37o" path="res://Images/ship2.png" id="7_u0rot"]
+[ext_resource type="Texture2D" uid="uid://bufduglm5ur1p" path="res://Images/base4.png" id="11_svlhj"]
+[ext_resource type="Texture2D" uid="uid://c8uedff0a1ldr" path="res://Images/paddle4.png" id="12_0thqq"]
+[ext_resource type="Texture2D" uid="uid://bbjd5wao1dlxd" path="res://Images/ship4.png" id="13_cstup"]
 
 [node name="Game Space" type="Node2D"]
 script = ExtResource("1_0rjoc")
+
+[node name="Background" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("2_nocwr")
+centered = false
 
 [node name="Top Wall" parent="." instance=ExtResource("1_of8fq")]
 position = Vector2(800, -150)
@@ -28,4 +43,79 @@ position = Vector2(510, 486)
 [node name="Player" parent="." instance=ExtResource("4_d8334")]
 position = Vector2(0, 900)
 
+[node name="Ship" parent="Player" index="3"]
+debug = true
+
+[node name="Player2" parent="." instance=ExtResource("4_d8334")]
+position = Vector2(1600, 0)
+rotation = 3.14159
+
+[node name="Sprite2D" parent="Player2/Base" index="0"]
+texture = ExtResource("5_e050k")
+
+[node name="PaddleOrigin" parent="Player2" index="1"]
+paddle_right_action = "paddle_left2"
+paddle_left_action = "paddle_right2"
+paddle_down_action = "paddle_up2"
+paddle_up_action = "paddle_down2"
+
+[node name="Sprite2D" parent="Player2/PaddleOrigin/Paddle" index="0"]
+texture = ExtResource("6_m086k")
+
+[node name="Ship" parent="Player2" index="3"]
+ship_right_action = "ship_right2"
+ship_left_action = "ship_left2"
+ship_down_action = "ship_down2"
+ship_up_action = "ship_up2"
+fire_bullet_action = "ship_bullet2"
+fire_missile_action = "ship_missile2"
+
+[node name="Sprite2D" parent="Player2/Ship" index="0"]
+texture = ExtResource("7_u0rot")
+
+[node name="Player3" parent="." instance=ExtResource("4_d8334")]
+rotation = 1.5708
+
+[node name="Sprite2D" parent="Player3/Base" index="0"]
+texture = ExtResource("5_hsfmm")
+
+[node name="PaddleOrigin" parent="Player3" index="1"]
+paddle_right_action = "paddle_left1"
+paddle_left_action = "paddle_right1"
+
+[node name="Sprite2D" parent="Player3/PaddleOrigin/Paddle" index="0"]
+texture = ExtResource("6_kkx65")
+
+[node name="Sprite2D" parent="Player3/Ship" index="0"]
+texture = ExtResource("7_tohny")
+
+[node name="Player4" parent="." instance=ExtResource("4_d8334")]
+position = Vector2(1600, 900)
+rotation = 4.71239
+
+[node name="Sprite2D" parent="Player4/Base" index="0"]
+texture = ExtResource("11_svlhj")
+
+[node name="Sprite2D" parent="Player4/PaddleOrigin/Paddle" index="0"]
+texture = ExtResource("12_0thqq")
+
+[node name="Sprite2D" parent="Player4/Ship" index="0"]
+texture = ExtResource("13_cstup")
+
 [editable path="Player"]
+[editable path="Player/Ship"]
+[editable path="Player2"]
+[editable path="Player2/Base"]
+[editable path="Player2/PaddleOrigin"]
+[editable path="Player2/PaddleOrigin/Paddle"]
+[editable path="Player2/Ship"]
+[editable path="Player3"]
+[editable path="Player3/Base"]
+[editable path="Player3/PaddleOrigin"]
+[editable path="Player3/PaddleOrigin/Paddle"]
+[editable path="Player3/Ship"]
+[editable path="Player4"]
+[editable path="Player4/Base"]
+[editable path="Player4/PaddleOrigin"]
+[editable path="Player4/PaddleOrigin/Paddle"]
+[editable path="Player4/Ship"]

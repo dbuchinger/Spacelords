@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+@export var debug = false
 #Player control variables
 @export var ship_right_action = "ship_right1"
 @export var ship_left_action := "ship_left1"
@@ -17,8 +18,10 @@ var thrust = 10
 var drag = .1
 
 #Ship stats
+var health = 3
 var bullet_reload_time = 500
 var missile_reload_time = 300
+var bullet_distance = 300
 
 # Reload trackers. These are set to the negative value of the load time so that the player can
 # shoot them at the start of the game.
@@ -33,6 +36,7 @@ var respawn_delay = 3000
 var respawn_signal = 0
 var invincibility_duration = 1500
 var invincibility_timer = 0
+var invincible = false
 
 #Scene and Object initializations
 @onready var game = $"/root/Game Space"
@@ -57,8 +61,8 @@ func _process(delta):
 	if disabled:
 		if Time.get_ticks_msec() >= respawn_signal:
 			_ship_respawn()
-	
-	print(global_position, "|", projectile_spawn.global_position)
+	if debug:
+		print("Player 1: ",global_position)
 func _physics_process(delta):
 	if !disabled:
 		thrust_vector = Input.get_vector(ship_left_action,ship_right_action,ship_up_action,ship_down_action)
@@ -73,7 +77,8 @@ func _physics_process(delta):
 		var collision_info = move_and_collide(ship_velocity)
 		
 		if collision_info:
-			if collision_info.get_collider().is_in_group("Walls"):
+			if collision_info.get_collider().is_in_group("Walls") || \
+			(collision_info.get_collider().is_in_group("Barrier") && get_collision_layer_value(7)):
 				ship_velocity = Vector2.ZERO
 			else:
 				_ship_destroyed()
@@ -83,6 +88,7 @@ func _shoot_bullet():
 		var new_bullet = bullet.instantiate()
 		new_bullet.position = projectile_spawn.global_position
 		new_bullet.velocity = ship_aim
+		new_bullet.bullet_lifespan = bullet_distance
 		game.add_child(new_bullet)
 		current_bullet_reload = Time.get_ticks_msec()
 
@@ -113,9 +119,13 @@ func _ship_respawn():
 	_respawn_invincibility()
 
 func _respawn_invincibility():
+	collision_shape.set_deferred("disabled", false)
+	set_collision_layer_value(5, false)
+	set_collision_layer_value(7, true)
 	while (Time.get_ticks_msec() < invincibility_timer):
 		await get_tree().create_timer(.100).timeout
 		modulate.a = .5
 		await get_tree().create_timer(.100).timeout
 		modulate.a = 1
-	collision_shape.set_deferred("disabled", false)
+	set_collision_layer_value(5, true)
+	set_collision_layer_value(7, false)

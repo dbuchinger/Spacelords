@@ -16,3 +16,4 @@
 [node name="Ship" parent="." instance=ExtResource("4_px0oq")]
 position = Vector2(250, -250)
 rotation = -0.785398
+scale = Vector2(1.5, 1.5)
